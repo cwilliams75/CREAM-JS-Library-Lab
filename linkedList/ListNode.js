@@ -4,3 +4,5 @@ class ListNode{
         this.next = next;
     }
 }
+
+module.exports= ListNode;
