@@ -63,7 +63,7 @@ test("Push Test", () => {
   
     // When
     const expected = 3;
-    const actual = stack.pop();
+    const actual = stack.length();
   
     // Then
     expect(expected).toEqual(actual);
@@ -72,7 +72,7 @@ test("Push Test", () => {
   test("Print Test", () => {
     // Given
     const stack = new Stack();
-    stack.push("hello world")
+    stack.top.push("hello world")
   
     // When
     const expected = "hello world";
@@ -82,15 +82,15 @@ test("Push Test", () => {
     expect(expected).toEqual(actual);
   });
     
-  test("Reverse Test", () => {
-    // Given
-    const stack = new Stack();
-    stack.push("Hello Friends")
+//   test("Reverse Test", () => {
+//     // Given
+//     const stack = new Stack();
+//     stack.push(12345)
   
-    // When
-    const expected = "sdneirF olleH";
-    const actual = stack._reverse();
+//     // When
+//     const expected = 54321;
+//     const actual = stack.reverse();
   
-    // Then
-    expect(expected).toEqual(actual);
-  });
+//     // Then
+//     expect(expected).toEqual(actual);
+//   });

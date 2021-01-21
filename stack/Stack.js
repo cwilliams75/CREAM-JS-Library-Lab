@@ -40,7 +40,7 @@ class Stack {
    print() {
       var top = this.top - 1; // because top points to index where new element to be inserted
       while(top >= 0) { // print upto 0th index
-          return this.data[top];
+          console.log(this.data[stack]);
            top--;
        }
     }
@@ -48,13 +48,13 @@ class Stack {
     // To print the stack in reverse order, we can use recursion.
 
     reverse() {
-       this._reverse(this.top - 1 );
+       this.reverse(this.top - 1 );
     }
-    _reverse(index) {
+    reverse(index) {
        if(index != 0) {
-          this._reverse(index-1);
+          this.reverse(index-1);
        }
-       return this.data[index];
+       console.log(this.data[index]);
     }
 }
 
