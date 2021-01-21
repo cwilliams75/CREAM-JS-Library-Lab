@@ -40,31 +40,61 @@ test("Remove Test", () => {
   expect(dictionary.hasKey("key")).toEqual(false);
 });
 test("KeyValues Test", () => {
-    //GIVEN
-    const dictionary = new Dictionary();
-    dictionary.set("key", "value");
-    //WHEN
-    dictionary.remove("key");
-    //THEN
-    expect(dictionary.hasKey("key")).toEqual(false);
-  });
-  test("Keys Test", () => {
-    //GIVEN
-    const dictionary = new Dictionary();
-    dictionary.set("key1", "value1");
-    dictionary.set("key2", "value2");
-    //WHEN
-    const keys = dictionary.keys();
-    //THEN
-    expect(keys).toEqual(["key1","key2"]);
-  });
-  test("Values Test", () => {
-    //GIVEN
-    const dictionary = new Dictionary();
-    dictionary.set("key1", "value1");
-    dictionary.set("key2", "value2");
-    //WHEN
-    const values = dictionary.values();
-    //THEN
-    expect(values).toEqual(["value1","value2"]);
-  });
+  //GIVEN
+  const dictionary = new Dictionary();
+  dictionary.set("key1", "value1");
+  dictionary.set("key2", "value2");
+  //WHEN
+  const keyValues = dictionary.keyValues();
+   //THEN
+  expect(keyValues).toEqual(false);
+});
+test("Keys Test", () => {
+  //GIVEN
+  const dictionary = new Dictionary();
+  dictionary.set("key1", "value1");
+  dictionary.set("key2", "value2");
+  //WHEN
+  const keys = dictionary.keys();
+  //THEN
+  expect(keys).toEqual(["key1", "key2"]);
+});
+test("Values Test", () => {
+  //GIVEN
+  const dictionary = new Dictionary();
+  dictionary.set("key1", "value1");
+  dictionary.set("key2", "value2");
+  //WHEN
+  const values = dictionary.values();
+  //THEN
+  expect(values).toEqual(["value1", "value2"]);
+});
+test("Size Test", () => {
+  //GIVEN
+  const dictionary = new Dictionary();
+  dictionary.set("key1", "value1");
+  dictionary.set("key2", "value2");
+  //WHEN
+  const size = dictionary.size();
+  //THEN
+  expect(size).toEqual(2);
+});
+
+test("IsEmpty Test", () => {
+  //GIVEN
+  const dictionary = new Dictionary();
+  //WHEN
+  const empty = dictionary.isEmpty();
+  //THEN
+  expect(empty).toEqual(true);
+});
+
+test("Clear Test", () => {
+  //GIVEN
+  const dictionary = new Dictionary();
+  dictionary.set("key", "value");
+  //WHEN
+  dictionary.clear();
+  //THEN
+  expect(dictionary.isEmpty()).toEqual(true);
+});

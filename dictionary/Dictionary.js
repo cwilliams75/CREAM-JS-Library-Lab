@@ -18,10 +18,7 @@ class Dictionary {
     return this.data[key] != null;
   }
 
-  /**
-   * remove the value from the dictionary
-   * @param {string} key
-   */
+  //remove(key): remove the value from the dictionary
   remove(key) {
     if (this.hasKey(key)) {
       delete this.data[key];
@@ -31,8 +28,17 @@ class Dictionary {
   }
 
   //keyValues : return an array containing all the pairs.
+  // keyValues() {
+  //   return Object.values(this.data);
+  // }
   keyValues() {
-    return Object.values(this.data);
+    const keyValuePairs = [];
+    for (const key in this.data) {
+      if (this.data.hasOwnProperty(key)) {
+        keyValuePairs.push(this.data[key] + ": " + key);
+      }
+    }
+    return keyValuePairs;
   }
 
   //keys: return all the keys in the dictionary.
@@ -48,12 +54,26 @@ class Dictionary {
   values() {
     let valuesArray = [];
     for (const key in this.data) {
-      console.log(key);
       // 'key1'
       // 'key2'
       valuesArray.push(this.data[key]);
     }
     return valuesArray;
+  }
+
+  //size(): return the number of values the dictionary contains.
+  size() {
+    return this.keys().length;
+  }
+
+  //isEmpty(): return true if the size equals zero.
+  isEmpty() {
+    return this.size() === 0;
+  }
+
+  //clear(): remove all values from the dictionary.
+  clear() {
+    this.data = {};
   }
 }
 const dictionary = new Dictionary();
