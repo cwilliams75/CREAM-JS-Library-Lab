@@ -1,6 +1,5 @@
 const { TestScheduler } = require("jest");
 const Dictionary = require("./Dictionary");
-
 test("Set Test", () => {
   //GIVEN
   const dictionary = new Dictionary();
@@ -9,7 +8,6 @@ test("Set Test", () => {
   //THEN
   expect(dictionary.get("key")).toEqual("value");
 });
-
 test("Get Test", () => {
   //GIVEN
   const dictionary = new Dictionary();
@@ -19,7 +17,6 @@ test("Get Test", () => {
   //THEN
   expect(value).toEqual("value");
 });
-
 test("HasKey Test", () => {
   //GIVEN
   const dictionary = new Dictionary();
@@ -29,7 +26,6 @@ test("HasKey Test", () => {
   //THEN
   expect(value).toEqual(true);
 });
-
 test("Remove Test", () => {
   //GIVEN
   const dictionary = new Dictionary();
@@ -46,7 +42,7 @@ test("KeyValues Test", () => {
   dictionary.set("key2", "value2");
   //WHEN
   const keyValues = dictionary.keyValues();
-   //THEN
+  //THEN
   expect(keyValues).toEqual(["key1: value1", "key2: value2"]);
 });
 test("Keys Test", () => {
@@ -69,7 +65,7 @@ test("Values Test", () => {
   //THEN
   expect(values).toEqual(["value1", "value2"]);
 });
-test("Size Test", () => {
+test("Size Test", () => {
   //GIVEN
   const dictionary = new Dictionary();
   dictionary.set("key1", "value1");
@@ -79,8 +75,7 @@ test("Size Test", () => {
   //THEN
   expect(size).toEqual(2);
 });
-
-test("IsEmpty Test", () => {
+test("IsEmpty Test", () => {
   //GIVEN
   const dictionary = new Dictionary();
   //WHEN
@@ -88,8 +83,7 @@ test("IsEmpty Test", () => {
   //THEN
   expect(empty).toEqual(true);
 });
-
-test("Clear Test", () => {
+test("Clear Test", () => {
   //GIVEN
   const dictionary = new Dictionary();
   dictionary.set("key", "value");
