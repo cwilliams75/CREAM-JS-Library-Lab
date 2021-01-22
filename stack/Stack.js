@@ -51,15 +51,16 @@ class Stack {
   }
 
   // To print the stack in reverse order, we can use recursion.
-
   reverse() {
-    this.reverse(this.top - 1);
-  }
-  reverse(index) {
-    if (index != 0) {
-      this.reverse(index - 1);
+    const len = this.data.length;
+    const halfLen = Math.floor(len / 2);
+    for (let i = 0; i < halfLen; i++) {
+      let leftNum = this.data[i];
+      this.data[i] = this.data[len - 1 - i];
+      this.data[len - 1 - i] = leftNum;
     }
-    console.log(this.data[index]);
+    this.data.map(d => console.log(d));
+    return this.data;
   }
 }
 

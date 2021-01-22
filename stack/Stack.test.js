@@ -84,15 +84,18 @@ test("Push Test", () => {
     expect(actual).toEqual(expected);
   });
     
-//   test("Reverse Test", () => {
-//     // Given
-//     const stack = new Stack();
-//     stack.push(12345)
+  test("Reverse Test", () => {
+    // Given
+    const stack = new Stack();
+    stack.push(1)
+    stack.push(2)
+    stack.push(3)
   
-//     // When
-//     const expected = 54321;
-//     const actual = stack.reverse();
+    // When
+    stack.reverse()
+    const expected = 1;
+    const actual = stack.peek();
   
-//     // Then
-//     expect(actual).toEqual(expected);
-//   });
+    // Then
+    expect(actual).toEqual(expected);
+  });
