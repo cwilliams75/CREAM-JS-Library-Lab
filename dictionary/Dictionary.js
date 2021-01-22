@@ -76,6 +76,17 @@ class Dictionary {
     this.data = {};
   }
 }
+set(key, value){
+  if (key != null & value != null) {
+      const stringKey = this.toStrFn(key);
+      this.table[stringKey] = new KeyValue(key, value);
+      return true;
+  }
+  return false;
+}
+
+
+
 const dictionary = new Dictionary();
 dictionary.set("Undefined Integers", { name: "CaptainCorey" });
 
