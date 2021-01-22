@@ -35,7 +35,7 @@ class Dictionary {
     const keyValuePairs = [];
     for (const key in this.data) {
       if (this.data.hasOwnProperty(key)) {
-        keyValuePairs.push(this.data[key] + ": " + key);
+        keyValuePairs.push(key + ": " + this.data[key]);
       }
     }
     return keyValuePairs;

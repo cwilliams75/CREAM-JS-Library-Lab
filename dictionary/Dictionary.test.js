@@ -47,7 +47,7 @@ test("KeyValues Test", () => {
   //WHEN
   const keyValues = dictionary.keyValues();
    //THEN
-  expect(keyValues).toEqual(false);
+  expect(keyValues).toEqual(["key1: value1", "key2: value2"]);
 });
 test("Keys Test", () => {
   //GIVEN
