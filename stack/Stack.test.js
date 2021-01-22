@@ -11,7 +11,7 @@ test("Push Test", () => {
     const actual = stack.length();
   
     // Then
-    expect(expected).toEqual(actual);
+    expect(actual).toEqual(expected);
   });
 
   test("Length Test", () => {
@@ -24,7 +24,7 @@ test("Push Test", () => {
     const actual = stack.length();
   
     // Then
-    expect(expected).toEqual(actual);
+    expect(actual).toEqual(expected);
   });
   
   test("Peek Test", () => {
@@ -38,7 +38,7 @@ test("Push Test", () => {
     const actual = stack.length();
   
     // Then
-    expect(expected).toEqual(actual);
+    expect(actual).toEqual(expected);
   });
 
   test("isEmpty Test", () => {
@@ -50,7 +50,7 @@ test("Push Test", () => {
     const actual = stack.length();
   
     // Then
-    expect(expected).toEqual(actual);
+    expect(actual).toEqual(expected);
   });
   
   test("Pop Test", () => {
@@ -62,24 +62,26 @@ test("Push Test", () => {
     stack.push(4)
   
     // When
+    stack.pop()
     const expected = 3;
     const actual = stack.length();
   
     // Then
-    expect(expected).toEqual(actual);
+    expect(actual).toEqual(expected);
   });
 
   test("Print Test", () => {
     // Given
     const stack = new Stack();
-    stack.top.push("hello world")
+    stack.push("world")
+    stack.push("hello")
   
     // When
-    const expected = "hello world";
+    const expected = ["hello", "world"];
     const actual = stack.print();
   
     // Then
-    expect(expected).toEqual(actual);
+    expect(actual).toEqual(expected);
   });
     
 //   test("Reverse Test", () => {
@@ -92,5 +94,5 @@ test("Push Test", () => {
 //     const actual = stack.reverse();
   
 //     // Then
-//     expect(expected).toEqual(actual);
+//     expect(actual).toEqual(expected);
 //   });

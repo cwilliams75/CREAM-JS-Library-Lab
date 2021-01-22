@@ -14,7 +14,7 @@ test("Size Test", () => {
   const actual = linkedList.size();
 
   // Then
-  expect(expected).toEqual(actual);
+  expect(actual).toEqual(expected);
 });
 
 test("Clear Test", () => {
@@ -29,7 +29,7 @@ test("Clear Test", () => {
   const actual = linkedList.size();
 
   // Then
-  expect(expected).toEqual(actual);
+  expect(actual).toEqual(expected);
 });
 
 test("GetLast Test", () => {
@@ -43,7 +43,7 @@ test("GetLast Test", () => {
   const actual = linkedList.getLast();
 
   // Then
-  expect(expected).toEqual(actual);
+  expect(actual).toEqual(expected);
 });
   
 test("GetFirst Test", () => {
@@ -57,7 +57,7 @@ test("GetFirst Test", () => {
   const actual = linkedList.getFirst();
 
   // Then
-  expect(expected).toEqual(actual);
+  expect(actual).toEqual(expected);
 });
 
 test("getAt Test", () => {
