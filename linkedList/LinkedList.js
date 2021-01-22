@@ -6,6 +6,7 @@ class LinkedList {
     this.head = head;
   }
 
+  //size(): returns the number of nodes in the linked list
   size() {
     let count = 0;
     let node = this.head;
@@ -16,10 +17,12 @@ class LinkedList {
     return count;
   }
 
+  //clear(): empties the linked list of all nodes
   clear() {
     this.head = null;
   }
 
+  //getLast(): returns the last node in the linked list
   getLast() {
     let lastNode = this.head;
     if (lastNode) {
@@ -30,10 +33,12 @@ class LinkedList {
     return lastNode;
   }
 
+  //getFirst(): returns the first node in the linked list
   getFirst() {
     return this.head;
   }
 
+  //getAt(): returns a node at a given index
   getAt(index) {
     let counter = 0;
     let node = this.head;
@@ -47,6 +52,7 @@ class LinkedList {
     return null;
   }
 
+  //add(element): adds a node to the end of the linked list
   add(element) { 
     let newNode = new ListNode(element); 
     if(!this.head) {
@@ -61,6 +67,7 @@ class LinkedList {
     return this.head;
   } 
 
+  //insertAtBeginning(element): adds a node to the beginning of the linked list 
   insertAtBeginning(element) {
     let newNode = new ListNode(element);
     newNode.next = this.head;
@@ -68,6 +75,7 @@ class LinkedList {
     return this.head;
   }
 
+  //insertAt(data, index): inserts a node into the linked list at a given index
   // insertAt(data, index) {
   //   if (!this.head) {
   //       this.head = new ListNode(data);
@@ -84,6 +92,7 @@ class LinkedList {
   //   return this.head
   // }
 
+  //deleteLastNode(): removes the last node of the linked list
   deleteLastNode() {
     if(!this.head){
       return null;
@@ -104,6 +113,7 @@ class LinkedList {
     return this.head;
   }
 
+  //deleteFirstNode(): removes the first node of the linked list
   deleteFirstNode() {
     if(!this.head){
         return;
@@ -112,6 +122,7 @@ class LinkedList {
     return this.head;
   }
 
+  //deleteAt(index): deletes a node at a given index in the linked list
   // deleteAt(index) {
   //   if (!this.head) {
   //     this.head = new ListNode(data);
