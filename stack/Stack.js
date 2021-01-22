@@ -48,7 +48,7 @@ class Stack {
     // To print the stack in reverse order, we can use recursion.
 
     reverse() {
-       this.reverse(this.top - 1 );
+       this.reverse(this.top - 1);
     }
     reverse(index) {
        if(index != 0) {
