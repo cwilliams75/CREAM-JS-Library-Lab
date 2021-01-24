@@ -27,10 +27,7 @@ class Dictionary {
     return false;
   }
 
-  //keyValues : return an array containing all the pairs.
-  // keyValues() {
-  //   return Object.values(this.data);
-  // }
+  //keyValues: return an array containing all the pairs.
   keyValues() {
     const keyValuePairs = [];
     for (const key in this.data) {
