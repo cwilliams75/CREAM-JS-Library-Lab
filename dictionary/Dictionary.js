@@ -51,8 +51,6 @@ class Dictionary {
   values() {
     let valuesArray = [];
     for (const key in this.data) {
-      // 'key1'
-      // 'key2'
       valuesArray.push(this.data[key]);
     }
     return valuesArray;
@@ -74,6 +72,4 @@ class Dictionary {
   }
 }
 
-const dictionary = new Dictionary();
-dictionary.set("Undefined Integers", { name: "CaptainCorey" });
 module.exports = Dictionary;
