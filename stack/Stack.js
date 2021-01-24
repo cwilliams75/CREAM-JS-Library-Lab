@@ -42,7 +42,7 @@ class Stack {
     let outPut = [];
     while (top >= 0) {
       // print up to 0th index
-      outPut.push (this.data[top]);
+      outPut.push(this.data[top]);
       console.log(this.data[top]);
       top--;
     }
@@ -50,7 +50,7 @@ class Stack {
     return outPut;
   }
 
-  // To print the stack in reverse order, we can use recursion.
+  // Reverse stack in place and prints them in the newly reversed order.
   reverse() {
     const len = this.data.length;
     const halfLen = Math.floor(len / 2);
