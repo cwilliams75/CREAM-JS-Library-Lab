@@ -1,0 +1,5 @@
+Linked List
+A linked list is a linear data structure similar to an array. Each element is a separate object and links to the next object in that list. The first node is called the head and the last node on the list points to null. 
+The main advantage of using linked lists is that nodes can be added or removed easily. 
+Even though we can add nodes without reorganizing the entire data structure it still has many disadvantages. 
+The disadvantages include using more memory than arrays because of the storage of the pointers and that search operations are slow due to nodes being accessed sequentially. 
