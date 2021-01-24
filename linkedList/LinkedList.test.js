@@ -67,10 +67,11 @@ test("getAt Test", () => {
   const linkedList = new LinkedList(head);
 
   // When
-  let selection = linkedList.getAt(1);
+  const expected = 1;
+  const actual = linkedList.getAt(0);
 
   // Then
-  expect(selection).toEqual(2);
+  expect(actual).toEqual(expected);
 });
 
 test("add Test", () => {
@@ -81,9 +82,11 @@ test("add Test", () => {
 
   // When
   linkedList.add(3);
+  const expected = 3;
+  const actual = linkedList.getLast().data;
 
   // Then
-  expect(linkedList.getLast().data).toEqual(3);
+  expect(actual).toEqual(expected);
 });
 
 test("insertAtBeginning Test", () => {
@@ -94,24 +97,28 @@ test("insertAtBeginning Test", () => {
 
   // When
   linkedList.insertAtBeginning(3);
+  const expected = 3;
+  const actual = linkedList.getFirst().data;
 
   // Then
-  expect(linkedList.getFirst().data).toEqual(3);
+  expect(actual).toEqual(expected);
 });
 
-// test("insertAt Test", () => {
-//   // Given
-//   const listNode2 = new ListNode(3, null);
-//   const listNode1 = new ListNode(2, listNode2);
-//   const head = new ListNode(1, listNode1);
-//   const linkedList = new LinkedList(head);
+test("insertAt Test", () => {
+  // Given
+  const listNode1 = new ListNode(2, null);
+  const head = new ListNode(1, listNode1);
+  const linkedList = new LinkedList(head);
+  linkedList.add(3);
 
-//   // When
-//   linkedList.insertAt(4, 2);
+  // When
+  linkedList.insertAt(4, 1);
+  const expected = 4;
+  const actual = linkedList.getAt(1);
 
-//   // Then
-//   expect(linkedList[1].data).toEqual(3);
-// });
+  // Then
+  expect(actual).toEqual(expected);
+});
 
 test("deleteLastNode Test", () => {
   // Given
@@ -121,9 +128,11 @@ test("deleteLastNode Test", () => {
 
   // When
   linkedList.deleteLastNode();
+  const expected = 1;
+  const actual = linkedList.getLast().data;
 
   // Then
-  expect(linkedList.getLast().data).toEqual(1);
+  expect(actual).toEqual(expected);
 });
 
 test("deleteFirstNode Test", () => {
@@ -134,22 +143,27 @@ test("deleteFirstNode Test", () => {
 
   // When
   linkedList.deleteFirstNode();
+  const expected = 2;
+  const actual = linkedList.getFirst().data
 
   // Then
-  expect(linkedList.getFirst().data).toEqual(2);
+  expect(actual).toEqual(expected);
 });
 
-// test("deleteAt Test", () => {
-//   // Given
-//   const listNode1 = new ListNode(2, null);
-//   const head = new ListNode(1, listNode1);
-//   const linkedList = new LinkedList(head);
+test("removeFrom Test", () => {
+  // Given
+  const listNode1 = new ListNode(2, null);
+  const head = new ListNode(1, listNode1);
+  const linkedList = new LinkedList(head);
+  linkedList.add(3);
 
-//   // When
-//   linkedList.deleteAt(0);
+  // When
+  linkedList.removeFrom(1);
+  const expected = 3;
+  const actual = linkedList.getAt(1);
 
-//   // Then
-//   expect(linkedList.getAt(0).data).toEqual(2);
-// });
+  // Then
+  expect(actual).toEqual(expected);
+});
 
 
