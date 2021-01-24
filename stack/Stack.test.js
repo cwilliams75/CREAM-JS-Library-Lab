@@ -35,7 +35,7 @@ test("Push Test", () => {
   
     // When
     const expected = 2;
-    const actual = stack.length();
+    const actual = stack.peek();
   
     // Then
     expect(actual).toEqual(expected);
@@ -46,8 +46,8 @@ test("Push Test", () => {
     const stack = new Stack();
 
     // When
-    const expected = 0;
-    const actual = stack.length();
+    const expected = true;
+    const actual = stack.isEmpty();
   
     // Then
     expect(actual).toEqual(expected);
